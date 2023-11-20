@@ -44,6 +44,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "./node_modules/.bin/mocha -R spec --timeout 10000 test/*.js",
+    "test-win": "node ./node_modules/mocha/bin/_mocha -R spec --timeout 10000 test/*.js",
+    "posttest-win": "npm run lint",
     "posttest": "npm run lint"
   },
   "main": "./lib/index.js",
